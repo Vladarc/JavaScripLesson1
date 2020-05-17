@@ -1,0 +1,102 @@
+
+@import 'normalize';
+@import 'variables';
+@import 'mixins';
+
+
+
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+body{
+@include font($body-ff,1.4rem,$fc:$body-color,$lh:1.7);
+background-color: $body-bg;
+
+}
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: $secondary-color;
+    border-left: $border-width solid $body-color;
+    border-right: $border-width solid $body-color;
+    min-height: 100vh;
+}
+    
+
+a,button{
+   @include tr;
+}
+
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba($color: #000000, $alpha: .3);
+    display: none;
+
+    &--active{
+        display: block;
+    }
+
+    &__window {
+        @include posA(50%,50%,-50%,-50%);
+        background-color: $secondary-color;
+        max-width: 600px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        min-height: 300px;
+        border-radius: 5px;
+    }
+      
+    
+   
+    
+}
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 40px;
+    background-color:$primary-color;
+    color:$body-color;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    &--primary{
+        border: 0;
+        will-change: transform;
+ 
+        @include hover {
+            transform: scale(1.1);
+        }
+    }
+}
+.hello-title{
+    text-align: center;
+}
+.field{
+    max-width: 250px;
+    width: 100%;
+    padding: 5px 15px;
+    border:$border-width solid  $primary-color;
+    outline: none;
+    margin-bottom: 20px;
+    
+}
+.section{
+    &:first-of-type{
+        border-top: $border-width solid $body-color;
+    }
+    border-bottom: $border-width solid $body-color;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
