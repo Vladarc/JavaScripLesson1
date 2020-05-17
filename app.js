@@ -16,8 +16,12 @@ const modalWindow = document.querySelector('.modal'),
  }
   
  const addNameToTitle = () => {
+     if(localStorage.getItem('name') == null ){
+    return
+     }else{
      let userName = localStorage.getItem('name')
      helloTitle.textContent = `Привет,${userName} !`
+     }
 }
  
 
@@ -25,11 +29,11 @@ const modalWindow = document.querySelector('.modal'),
     event.preventDefault();
     if(modalField.value.trim() === ""){
        return
-   }else {
+    }else {
     localStorage.setItem("name",modalField.value)
        modalWindow.classList.remove('modal--active')
        helloWindow.classList.remove('modal__window--active')
-           
+       addNameToTitle()
         }
 } 
 
