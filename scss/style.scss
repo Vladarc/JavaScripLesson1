@@ -89,6 +89,9 @@ a,button{
     border:$border-width solid  $primary-color;
     outline: none;
     margin-bottom: 20px;
+    &:focus::placeholder {
+        color: transparent;
+    }
     
 }
 .section{
@@ -100,4 +103,8 @@ a,button{
     display: flex;
     flex-direction: column;
     align-items: center;
+    &__task-name{
+        text-align: center;
+        margin-bottom: 10px;
+    }
 }

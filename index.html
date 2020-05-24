@@ -21,8 +21,9 @@
     <div class="container">
         <h1 class="hello-title">&shy;</h1>
 
-        <section class="section ">
+        <section class="section">
             <h2>Задание 2</h2>
+            <span class="section__task-name">Запросите у пользователя год его рождения, посчитайте, сколько ему лет и выведите результат. Текущий год укажите в коде как константу.</span>
             <input type="number" class="field field--userYear" >
             <button class="btn btn--primary btn--userYear">Get Year</button>
                 <p>Ваш возраст:<span class="out-userYear"></span> </p>
@@ -30,6 +31,7 @@
 
         <section class="section ">
             <h2>Задание 3</h2>
+            <span class="section__task-name">Запросите у пользователя длину стороны квадрата и выведите периметр такого квадрата.</span>
             <input type="number" class="field field--square" >
             <button class="btn btn--primary btn--square">Get Perimeter</button>
                 <p>Периметр квадрата:<span class="out-square"></span> </p>
@@ -37,10 +39,43 @@
 
         <section class="section ">
             <h2>Задание 4</h2>
+            <span class="section__task-name">Запросите у пользователя радиус окружности и выведите площадь такой окружности.</span>
             <input type="number" class="field field--radius" >
             <button class="btn btn--primary btn--radius">Get Perimeter</button>
                 <p>Площадь окружности:<span class="out-radius"></span> </p>
         </section>
+
+        
+        <section class="section ">
+            <h2>Задание 6</h2>
+            <span class="section__task-name">Реализуйте конвертор валют. Пользователь вводит доллары, программа переводит в евро. Курс валюты храните в константе.</span>
+            <input type="number" class="field field--money" placeholder="Type value in $">
+                    <p>Сумма в €:<span class="out-money"></span> </p>
+            </section>  
+
+
+            <section class="section ">
+            <h2>Задание 7</h2>
+            <span class="section__task-name">Пользователь указывает объем флешки в Гб. Программа должна посчитать, сколько файлов размером в 820 Мб помещается на флешку.</span>
+            <input type="number" class="field field--memory" >
+                    <p>Кол.в файлов по 820 мб вы можете записать: <span class="out-memory"></span> </p>
+            </section>  
+
+            <section class="section ">
+            <h2>Задание 8</h2>
+            <span class="section__task-name">Пользователь вводит сумму денег в кошельке и цену одной шоколадки. Программа выводит, сколько шоколадок может купить пользователь, и сколько сдачи у него останется.</span>
+            <input type="number" class="field field--amountOfMoney moneyField" placeholder="Кол.в. денег" > 
+            <input type="number" class="field field--priceOfProduct moneyField" placeholder="Цена желаемого товара">
+           
+                <p>Кол.в шоколада: <span class="out-amountOfChocolate">0</span>  Сдача: <span class="out-surrender" >0</span> </p>
+            </section>
+
+                <section class="section ">
+                <h2>Задание 9</h2>
+                <span class="section__task-name">Запросите у пользователя трехзначное число и выведите его задом наперед. Для решения задачи вам понадобится оператор % (остаток от деления).</span>
+                <input type="number" class="field field--num" >
+                        <p>Число: <span class="out-num"></span> </p>
+                </section>  
     </div>
 </main>
 
